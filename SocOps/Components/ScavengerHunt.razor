@@ -4,28 +4,28 @@
     <!-- Header -->
     <header class="flex items-center justify-between p-3 cyber-header">
         <button @onclick="OnReset" class="text-sm px-3 py-1.5 rounded"
-                style="color: var(--text-muted); border: 1px solid var(--dark-border);">
+                style="color: var(--text-muted); border: 2px solid var(--border-light); border-radius: 0.75rem; font-weight: 700;">
             ← Exit
         </button>
-        <h1 class="font-bold cyber-title cyber-glow-cyan" style="font-size: 1rem; letter-spacing: 0.15em;">Scavenger Hunt</h1>
+        <h1 class="font-bold cyber-title cyber-glow-cyan" style="font-size: 1.1rem;">� Scavenger Hunt</h1>
         <div class="w-16"></div>
     </header>
 
     <!-- Progress -->
     <div class="p-3">
-        <div class="flex justify-between text-xs mb-2" style="color: var(--text-muted); font-family: 'Orbitron', sans-serif; letter-spacing: 0.05em;">
+        <div class="flex justify-between text-xs mb-2" style="color: var(--text-muted); font-family: 'Pacifico', cursive;">
             <span>Progress</span>
-            <span style="color: var(--neon-cyan);">@CompletedCount / @Items.Count</span>
+            <span style="color: var(--princess-pink);">@CompletedCount / @Items.Count</span>
         </div>
-        <div class="w-full rounded" style="height: 6px; background: var(--dark-card); border: 1px solid var(--dark-border);">
-            <div class="rounded" style="height: 100%; width: @ProgressPercent%; background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta)); transition: width 0.3s ease; box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);"></div>
+        <div class="w-full rounded" style="height: 8px; background: var(--bg-surface); border: 2px solid var(--border-light); border-radius: 2rem;">
+            <div class="rounded" style="height: 100%; width: @ProgressPercent%; background: linear-gradient(90deg, var(--princess-pink), var(--princess-purple), var(--princess-lavender)); transition: width 0.3s ease; border-radius: 2rem;"></div>
         </div>
     </div>
 
     @if (CompletedCount == Items.Count)
     {
-        <div class="cyber-bingo-banner text-center py-2 font-semibold text-sm" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0.1em;">
-            ⚡ ALL COMPLETE! ⚡
+        <div class="cyber-bingo-banner text-center py-2 font-semibold text-sm" style="font-family: 'Pacifico', cursive;">
+            ✨ ALL COMPLETE! ✨
         </div>
     }
 
@@ -39,13 +39,13 @@
                 <button @onclick="() => ToggleItem(index)"
                         class="w-full flex items-center p-3 rounded-lg text-left transition-all duration-150 @(item.IsCompleted ? "cyber-square-marked" : "cyber-square")">
                     <span class="flex items-center justify-center rounded"
-                          style="width: 24px; height: 24px; min-width: 24px; margin-right: 12px; border: 1px solid @(item.IsCompleted ? "var(--neon-cyan)" : "var(--dark-border)"); background: @(item.IsCompleted ? "rgba(0, 240, 255, 0.2)" : "transparent");">
+                          style="width: 24px; height: 24px; min-width: 24px; margin-right: 12px; border: 2px solid @(item.IsCompleted ? "var(--princess-pink)" : "var(--border-light)"); background: @(item.IsCompleted ? "rgba(236, 72, 153, 0.15)" : "transparent"); border-radius: 0.5rem;">
                         @if (item.IsCompleted)
                         {
-                            <span style="color: var(--neon-cyan); font-size: 14px;">◆</span>
+                            <span style="color: var(--princess-pink); font-size: 14px;">♥</span>
                         }
                     </span>
-                    <span class="text-sm" style="font-weight: 500; @(item.IsCompleted ? "text-decoration: line-through; opacity: 0.6;" : "")">@item.Text</span>
+                    <span class="text-sm" style="font-weight: 600; @(item.IsCompleted ? "text-decoration: line-through; opacity: 0.6;" : "")">@item.Text</span>
                 </button>
             }
         </div>

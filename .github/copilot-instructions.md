@@ -30,15 +30,16 @@
 - Razor components use `@code` blocks (not code-behind)
 - CSS classes compose from utility classes in `app.css`
 - New utilities should follow existing naming patterns
-- Game state flows: `Start → Playing → Bingo`
+- Game state flows: `Start → Playing → Bingo`, `Start → ScavengerHunt`, `Start → CardDeck`
 
-## Design Guide — Cyberpunk Neon Theme
-- **Fonts**: `Orbitron` for titles/headings, `Rajdhani` for body text
-- **Colors**: Dark backgrounds (`#0a0a0f`, `#12121a`, `#1a1a2e`) with neon accents
-  - Cyan (`#00f0ff`) — primary accent, marked squares, interactive elements
-  - Magenta (`#ff00e5`) — winning state, bingo alerts, emphasis
-  - Yellow (`#ffe600`) — free space highlight
-  - Green (`#39ff14`) — success/completion indicators
-- **Effects**: Neon glow (`text-shadow`, `box-shadow`) on interactive elements; scanline overlay on backgrounds; subtle glitch-in animations
-- **CSS Classes**: Use `cyber-*` prefixed classes (`cyber-title`, `cyber-btn`, `cyber-card`, `cyber-square`, etc.)
-- **Aesthetic**: Dark sci-fi terminal feel. No purple gradients, no generic pastel palettes. All new components should use CSS variables from `:root`
+## Design Guide — Unicorn Princess Theme
+- **Fonts**: `Pacifico` (cursive) for titles/headings, `Quicksand` for body text
+- **Colors**: Soft blush/pink backgrounds (`#fdf2f8`, `#fae8ff`, `#ffffff`) with girly accents
+  - Pink (`#ec4899`) — primary accent, marked squares, interactive elements
+  - Purple (`#a78bfa`) — winning state, bingo alerts, emphasis
+  - Gold (`#fbbf24`) — free space highlight
+  - Magenta (`#f472b6`) — secondary buttons, card deck mode
+  - Lavender (`#c4b5fd`) — gradients, progress bars
+- **Effects**: Soft pink/purple shadows, sparkle animations, extra-rounded corners (1.5–2rem), shimmer highlights
+- **CSS Classes**: Use `cyber-*` prefixed classes (`cyber-title`, `cyber-btn`, `cyber-card`, `cyber-square`, etc.) — names kept for backward compat
+- **Aesthetic**: Magical princess/unicorn theme. Rounded shapes, heart/sparkle/crown emojis, pink-to-purple gradients. All new components should use CSS variables from `:root`

@@ -4,10 +4,10 @@
     <!-- Header -->
     <header class="flex items-center justify-between p-3 cyber-header">
         <button @onclick="OnReset" class="text-sm px-3 py-1.5 rounded"
-                style="color: var(--text-muted); border: 1px solid var(--dark-border);">
+                style="color: var(--text-muted); border: 2px solid var(--border-light); border-radius: 0.75rem; font-weight: 700;">
             ← Exit
         </button>
-        <h1 class="font-bold cyber-title cyber-glow-cyan" style="font-size: 1rem; letter-spacing: 0.15em;">Card Deck</h1>
+        <h1 class="font-bold cyber-title cyber-glow-cyan" style="font-size: 1.1rem;">🦄 Card Deck</h1>
         <div class="w-16"></div>
     </header>
 
@@ -19,28 +19,28 @@
                  style="width: 100%; aspect-ratio: 3/4; cursor: pointer; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; @(IsFlipped ? "transform: rotateY(180deg);" : "")">
 
                 <!-- Card Front (face down) -->
-                <div style="position: absolute; inset: 0; backface-visibility: hidden; border-radius: 0.75rem;">
+                <div style="position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1.5rem;">
                     <div class="flex flex-col items-center justify-center h-full rounded-xl"
-                         style="background: var(--dark-card); border: 2px solid var(--neon-cyan); box-shadow: var(--glow-cyan);">
-                        <div class="cyber-title" style="font-size: 3rem; color: var(--neon-cyan); text-shadow: 0 0 20px var(--neon-cyan);">?</div>
-                        <p class="text-sm" style="color: var(--text-muted); font-family: 'Orbitron', sans-serif; letter-spacing: 0.15em; margin-top: 1rem;">TAP TO DRAW</p>
+                         style="background: linear-gradient(135deg, #fdf2f8, #fae8ff); border: 3px solid var(--princess-pink); box-shadow: var(--shadow-pink); border-radius: 1.5rem;">
+                        <div class="cyber-title" style="font-size: 3rem; color: var(--princess-pink);">?</div>
+                        <p class="text-sm" style="color: var(--text-muted); font-family: 'Pacifico', cursive; margin-top: 1rem;">TAP TO DRAW</p>
                     </div>
                 </div>
 
                 <!-- Card Back (face up - question) -->
-                <div style="position: absolute; inset: 0; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 0.75rem;">
+                <div style="position: absolute; inset: 0; backface-visibility: hidden; transform: rotateY(180deg); border-radius: 1.5rem;">
                     <div class="flex flex-col items-center justify-center h-full rounded-xl p-6"
-                         style="background: linear-gradient(135deg, var(--dark-card), #1e1e3a); border: 2px solid var(--neon-magenta); box-shadow: var(--glow-magenta);">
-                        <div style="font-size: 2rem; margin-bottom: 1rem;">⚡</div>
+                         style="background: linear-gradient(135deg, #fdf2f8, #fae8ff); border: 3px solid var(--princess-purple); box-shadow: var(--shadow-pop); border-radius: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🦄</div>
                         <p class="text-center font-semibold text-lg"
-                           style="color: var(--text-primary); line-height: 1.6; font-family: 'Rajdhani', sans-serif; font-weight: 600;">
+                           style="color: var(--text-primary); line-height: 1.6; font-family: 'Quicksand', sans-serif; font-weight: 700;">
                             Find someone who...
                         </p>
                         <p class="text-center font-bold cyber-glow-magenta"
-                           style="color: var(--neon-magenta); font-size: 1.25rem; margin-top: 0.75rem; font-family: 'Rajdhani', sans-serif;">
+                           style="color: var(--princess-purple); font-size: 1.25rem; margin-top: 0.75rem; font-family: 'Quicksand', sans-serif;">
                             @CurrentQuestion
                         </p>
-                        <p class="text-xs" style="color: var(--text-muted); margin-top: 1.5rem; font-family: 'Orbitron', sans-serif; letter-spacing: 0.1em;">
+                        <p class="text-xs" style="color: var(--text-muted); margin-top: 1.5rem; font-family: 'Pacifico', cursive;">
                             @(CardIndex + 1) / @ShuffledQuestions.Count
                         </p>
                     </div>

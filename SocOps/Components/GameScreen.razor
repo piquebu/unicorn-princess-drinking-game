@@ -5,23 +5,23 @@
     <header class="flex items-center justify-between p-3 cyber-header">
         <button
             @onclick="OnReset"
-            class="text-sm px-3 py-1.5 rounded" style="color: var(--text-muted); border: 1px solid var(--dark-border);">
+            class="text-sm px-3 py-1.5 rounded" style="color: var(--text-muted); border: 2px solid var(--border-light); border-radius: 0.75rem; font-weight: 700;">
             ← Exit
         </button>
-        <h1 class="font-bold cyber-title cyber-glow-cyan" style="font-size: 1rem; letter-spacing: 0.15em;">Soc Ops</h1>
+        <h1 class="font-bold cyber-title cyber-glow-cyan" style="font-size: 1.1rem;">👑 Soc Ops</h1>
         <div class="w-16"></div>
     </header>
 
     <!-- Instructions -->
-    <p class="text-center text-sm py-2 px-4" style="color: var(--text-muted); font-weight: 500;">
+    <p class="text-center text-sm py-2 px-4" style="color: var(--text-muted); font-weight: 600;">
         Tap a square when you find someone who matches it.
     </p>
 
     <!-- Bingo indicator -->
     @if (HasBingo)
     {
-        <div class="cyber-bingo-banner text-center py-2 font-semibold text-sm" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0.1em;">
-            ⚡ BINGO! You got a line! ⚡
+        <div class="cyber-bingo-banner text-center py-2 font-semibold text-sm" style="font-family: 'Pacifico', cursive;">
+            ✨ BINGO! You got a line! ✨
         </div>
     }
 
