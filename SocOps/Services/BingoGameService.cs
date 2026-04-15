@@ -39,6 +39,16 @@ public class BingoGameService
         NotifyStateChanged();
     }
 
+    public void StartMode(GameState mode)
+    {
+        CurrentGameState = mode;
+        Board = new();
+        WinningLine = null;
+        ShowBingoModal = false;
+        _ = SaveGameStateAsync();
+        NotifyStateChanged();
+    }
+
     public void HandleSquareClick(int squareId)
     {
         Board = BingoLogicService.ToggleSquare(Board, squareId);

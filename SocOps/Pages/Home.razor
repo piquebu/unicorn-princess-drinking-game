@@ -8,7 +8,17 @@
 
 @if (GameService.CurrentGameState == GameState.Start)
 {
-    <StartScreen OnStart="@GameService.StartGame" />
+    <StartScreen OnStart="@GameService.StartGame"
+                 OnStartScavenger="@StartScavengerHunt"
+                 OnStartCardDeck="@StartCardDeck" />
+}
+else if (GameService.CurrentGameState == GameState.ScavengerHunt)
+{
+    <ScavengerHunt OnReset="@GameService.ResetGame" />
+}
+else if (GameService.CurrentGameState == GameState.CardDeck)
+{
+    <CardDeck OnReset="@GameService.ResetGame" />
 }
 else
 {
@@ -30,6 +40,16 @@ else
     {
         await GameService.InitializeAsync();
         GameService.OnStateChanged += StateHasChanged;
+    }
+
+    private void StartScavengerHunt()
+    {
+        GameService.StartMode(GameState.ScavengerHunt);
+    }
+
+    private void StartCardDeck()
+    {
+        GameService.StartMode(GameState.CardDeck);
     }
 
     public void Dispose()

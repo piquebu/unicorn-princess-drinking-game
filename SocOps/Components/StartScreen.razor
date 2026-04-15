@@ -1,26 +1,46 @@
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50 cyber-scanline">
+    <div class="text-center max-w-sm animate-fade-slide-up">
+        <h1 class="text-4xl font-bold mb-2 cyber-title cyber-glow-cyan">Soc Ops</h1>
+        <p class="text-lg text-gray-500 mb-8" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0.3em; font-size: 0.75rem; text-transform: uppercase;">Social Bingo</p>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
+        <div class="cyber-card rounded-lg p-6 shadow-sm mb-8">
+            <h2 class="font-semibold text-gray-800 mb-3 cyber-title" style="font-size: 0.85rem; letter-spacing: 0.1em; color: var(--neon-cyan);">// How to play</h2>
+            <ul class="text-left text-gray-600 text-sm space-y-2" style="font-weight: 500;">
+                <li><span style="color: var(--neon-cyan);">►</span> Find people who match the questions</li>
+                <li><span style="color: var(--neon-magenta);">►</span> Tap a square when you find a match</li>
+                <li><span style="color: var(--neon-green);">►</span> Get 5 in a row to win!</li>
             </ul>
         </div>
 
-        <button
-            @onclick="OnStart"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
-        </button>
+        <div class="space-y-2">
+            <button
+                @onclick="OnStart"
+                class="w-full cyber-btn py-4 px-8 rounded-lg text-lg">
+                Bingo Grid
+            </button>
+            <button
+                @onclick="OnStartScavenger"
+                class="w-full py-3 px-8 rounded-lg text-sm font-semibold transition-all duration-150"
+                style="background: transparent; border: 1px solid var(--neon-magenta); color: var(--neon-magenta); font-family: 'Orbitron', sans-serif; letter-spacing: 0.08em;">
+                Scavenger Hunt
+            </button>
+            <button
+                @onclick="OnStartCardDeck"
+                class="w-full py-3 px-8 rounded-lg text-sm font-semibold transition-all duration-150"
+                style="background: transparent; border: 1px solid var(--neon-yellow); color: var(--neon-yellow); font-family: 'Orbitron', sans-serif; letter-spacing: 0.08em;">
+                Card Deck
+            </button>
+        </div>
     </div>
 </div>
 
 @code {
     [Parameter]
     public EventCallback OnStart { get; set; }
+
+    [Parameter]
+    public EventCallback OnStartScavenger { get; set; }
+
+    [Parameter]
+    public EventCallback OnStartCardDeck { get; set; }
 }
