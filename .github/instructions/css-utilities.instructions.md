@@ -30,12 +30,24 @@ This project uses custom CSS utility classes (similar to Tailwind) defined in `w
 .aspect-square
 ```
 
-### Colors
+### Colors (Princess Theme)
 ```css
-.bg-white, .bg-gray-50, .bg-gray-100
-.bg-accent (primary blue), .bg-marked (green for selected)
-.text-gray-500 through .text-gray-900
-.text-green-600, .text-amber-500
+/* CSS variables defined in :root */
+--princess-pink: #ec4899
+--princess-purple: #a78bfa
+--princess-magenta: #f472b6
+--princess-gold: #fbbf24
+--princess-lavender: #c4b5fd
+--princess-rose: #fb7185
+--bg-blush: #fdf2f8
+--bg-surface: #fae8ff
+--text-primary: #4a1942
+--text-muted: #9b72a0
+
+/* Utility classes */
+.bg-white, .bg-gray-50
+.cyber-square (unmarked), .cyber-square-marked (pink selected)
+.cyber-square-winning (gold highlight), .cyber-square-free (center free space)
 ```
 
 ### Typography
