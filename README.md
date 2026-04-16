@@ -1,56 +1,91 @@
-🌐 [Português (BR)](README.pt_BR.md) | [Español](README.es.md)
+# 🦄🥂 Unicorn Princess Party Drinking Game
 
-# Soc Ops
+A magical, sparkly party drinking game built with Blazor WebAssembly. Gather your friends, pour your drinks, and let the princess-themed prompts decide who sips, drinks, or chugs!
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
-
-🎮 **[Play the Game](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/)** • 📚 **[View Lab Guide](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/)**
-
----
-
-## 📚 Lab Guide
-
-| Part | Title |
-|------|-------|
-| [**00**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=00-overview) | Overview & Checklist |
-| [**01**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=01-setup) | Setup & Context Engineering |
-| [**02**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=02-design) | Design-First Frontend |
-| [**03**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=03-quiz-master) | Custom Quiz Master |
-| [**04**](https://dotnet-presentations.github.io/vscode-github-copilot-agent-lab/docs/step.html?step=04-multi-agent) | Multi-Agent Development |
-
-> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
+![.NET 10](https://img.shields.io/badge/.NET-10.0-pink?style=flat-square&logo=dotnet)
+![Blazor WASM](https://img.shields.io/badge/Blazor-WebAssembly-purple?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-lavender?style=flat-square)
 
 ---
 
-## Prerequisites
+## ✨ Game Modes
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or higher
+| Mode | Description |
+|------|-------------|
+| 🥂 **Bingo Grid** | 5×5 bingo board — tap squares as people drink. Get 5 in a row and everyone cheers! |
+| 🔮 **Drink Checklist** | Checklist of drinking prompts — work through them all for a royal toast |
+| 🃏 **Draw a Card** | Flip cards one at a time for surprise drinking prompts |
 
-## Open in GitHub Codespaces (optional)
+## 🍷 How It Works
 
-After creating your own repo from this template:
+1. Pick a game mode
+2. Read the prompt out loud
+3. Sip, drink, or chug as instructed
+4. Tap to mark it done
+5. Celebrate when you complete a line / the list / the deck!
 
-1. Open your repo on GitHub
-2. Click **Code** → **Codespaces** → **Create codespace on main**
-3. Wait for the devcontainer to finish setup
-4. From the repository root, run:
-   ```bash
-   cd SocOps
-   dotnet run
-   ```
+> **Please drink responsibly.** This game works just as well with non-alcoholic drinks! 🧃
 
-## Run
+---
+
+## 🎨 Theme
+
+Unicorn Princess aesthetic with:
+- **Fonts**: Pacifico (cursive headings) + Quicksand (body)
+- **Colors**: Pink `#ec4899`, Purple `#a78bfa`, Gold `#fbbf24`, Magenta `#f472b6`, Lavender `#c4b5fd`
+- **Vibes**: Sparkle animations, rounded corners, heart checkmarks, crown & unicorn emojis
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+
+### Run
 
 ```bash
 cd SocOps
 dotnet run
 ```
 
-## Build
+Open http://localhost:5166 in your browser.
+
+### Build
 
 ```bash
 cd SocOps
 dotnet build
 ```
 
-Deploys automatically to GitHub Pages on push to `main`.
+---
+
+## 🏗️ Tech Stack
+
+- **C# / .NET 10** — Blazor WebAssembly (client-side, no server needed)
+- **CSS** — Custom utility classes with princess theme variables
+- **Fonts** — Google Fonts (Pacifico + Quicksand)
+- **No external JS dependencies**
+
+## 📁 Project Structure
+
+```
+SocOps/
+├── Components/     # Razor components (StartScreen, GameScreen, BingoBoard, etc.)
+├── Data/           # Drinking game prompts (Questions.cs)
+├── Models/         # Game state models
+├── Services/       # Game logic services
+├── Pages/          # Main entry page (Home.razor)
+└── wwwroot/        # Static assets, CSS, index.html
+```
+
+---
+
+## 🦄 Contributing
+
+Got ideas for new drinking prompts? Want to add a new game mode? PRs welcome!
+
+## 📜 License
+
+MIT
